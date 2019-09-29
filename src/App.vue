@@ -1,17 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <fullscreen ref="fullscreen" @change="fullscreenChange" wrap="true" background="#FFF">
+      <div class="main">
+        <router-view/>
+      </div>
+    </fullscreen>
+    <button type="button" @click="toggle" >Fullscreen</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import start from './components/start.vue'
+import invoice from './components/invoice.vue'
+import thanks from './components/thanks.vue'
+
+import fullscreen from 'vue-fullscreen'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    start,
+    invoice,
+    thanks
+  },
+  methods: {
+    toggle () {
+      this.$refs['fullscreen'].toggle()
+    },
+    fullscreenChange (fullscreen) {
+      this.fullscreen = fullscreen
+    }
+  },
+  data() {
+    return {
+      fullscreen: false
+    }
   }
 }
 </script>
@@ -23,6 +46,25 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.main {
+  margin-top: 100px;
+}
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px;
+}
+.main h1 {
+  font-size: 65px;
+}
+.main h2 {
+  font-size: 45px;
+}
+.btn {
+  font-size: 50px;
 }
 </style>
