@@ -28,3 +28,7 @@ VUE_APP_SLP_ADDRESS=[SLP PAYMENT ADDRESS]
 The following command can be used to build the project into a web application. See https://vuejs.org/ for detailed documentation on running Vue JS applications.
 
 ``vue-cli-service build``
+
+###Demonstration
+
+[![SPICE Token Demo](https://img.youtube.com/vi/3qpG0NClXXc/0.jpg)](https://www.youtube.com/watch?v=3qpG0NClXXc)
