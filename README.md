@@ -29,6 +29,6 @@ The following command can be used to build the project into a web application. S
 
 ``vue-cli-service build``
 
-###Demonstration
+### Demonstration
 
 [![SPICE Token Demo](https://img.youtube.com/vi/3qpG0NClXXc/0.jpg)](https://www.youtube.com/watch?v=3qpG0NClXXc)
